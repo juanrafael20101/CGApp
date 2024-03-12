@@ -1,0 +1,16 @@
+.column_quick {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 40%;
+    margin-left: 20px;
+  }
+  
+  .column_schedule_info {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 35%;
+    position: fixed;
+    right: 0;
+  }

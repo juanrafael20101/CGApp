@@ -1,52 +1,35 @@
-import { useSession, useSessionContext, useSupabaseClient } from '@supabase/auth-helpers-react';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-
-import { Quickactions, Navbar } from './components';
-import { Schedule, Userinfo } from './containers';
+import { Navbar } from './components';
+import AppRouter from './views/AppRouter';
 
 import './App.css';
-import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom";
 
-import Patients from "./pages/patients";
-import Home from "./pages";
-import history from './history';
 
 function App() {
-  const session = useSession(); // tokens, when session exists
-  const supabase = useSupabaseClient(); // talk to supabase
-  const { isLoading } = useSessionContext();
-
-  
-
-  const [name, setName] = useState([]);
-
-  if (isLoading) {
-    return <></>
-  }
-  
 
   return (
-    
-    <Router history={history}>
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route
-          path="/Patients"
-          element={<Patients />}
-                      />
-      </Routes>
+    /* the shell of the app always has our 
+    - gradient background
+    - navbar */
+    <Router>
+      <div className = 'App'>
+        <div className= 'gradient__bg'>
+          <div className = 'column_container'>
+            <div className = "column_navigation">
+              {/* we pass the approuter in order to define the routes given to our navbar */}
+              {/* diff views are managed in our view folder */}
+              <Navbar/>
+            </div>
+            <div className = 'column_view_page'>
+              <AppRouter />
+            </div>
+          </div>
+        </div>
+      </div>
     </Router>
-   
   );
-
-
-
 }
 
 export default App;

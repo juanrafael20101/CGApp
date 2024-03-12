@@ -1,78 +1,70 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { home_icon, calendar_icon, patient_icon, setting_icon, staff_icon } from '../../assets';
-import './navbar.css';
-import { useNavigate } from "react-router-dom";
-import Patients from "../../pages/patients";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-  } from "react-router-dom";
 
+import './navbar.css';
 
 const Navbar = () => {
-    const navigate = useNavigate();
-   
     return (
         <div className = 'navbar'>
             <div className = 'box_border'>
-                <button className='opaque_button' onClick= {() => navigate("/")}>
-                    <div className = 'button_text'>Home</div>
+                <Link to = '/home' className = 'opaque_button'>
+                    <div className = 'button_text'>Inicio</div>
                     <img
                         src = {home_icon}
                         className= 'img'
                         alt = 'home icon'
                     />
-                </button>
+                </Link>
             </div>
 
             <div className='box_border'>
-                <button className='opaque_button' onClick= {() => navigate("/patients")}>
+                <Link to = '/schedule' className = 'opaque_button'>
 
-                    <div className='button_text'>Scheduler</div>
+                    <div className='button_text'>Planificador</div>
                     <img
                         src = {calendar_icon}
                         alt = 'calendar icon'
                         className = 'img'
                     />
-                </button>
+                </Link>
             </div>
 
             <div className='box_border'>
-                <button className='opaque_button' onClick={() => navigate("/patients")}>
+                <Link to = '/patients' className = 'opaque_button'>
 
-                    <div className='button_text'>Pacients</div>
+                    <div className='button_text'>Pacientes</div>
                     <img
                         src = {patient_icon}
                         alt = 'patient icon'
                         className = 'img'
                     />
-                </button>
+                </Link>
             </div>
 
             <div className='box_border'>
-                <button className='opaque_button' onClick={() => console.log('Equipo clicked')}>
+                <Link to = '/staff' className = 'opaque_button'>
 
-                    <div className='button_text'>Team</div>
+                    <div className='button_text'>Equipo</div>
                     <img
                         src = {staff_icon}
                         alt = 'staff icon'
                         className = 'img'
                     />
-                </button>
+                </Link>
             </div>
 
             <div className='box_border_2'>
-                <button className='opaque_button' onClick={() => console.log('Ajustes clicked')}>
+                <Link to = '/settings' className = 'opaque_button'>
 
-                    <div className = 'button_text'>Settings</div>
+                    <div className = 'button_text'>Ajustes</div>
                     <img
                         src = {setting_icon}
                         alt = 'setting icon'
                         className = 'img'
                     />
-                </button>
+                </Link>
             </div>
 
         </div>
