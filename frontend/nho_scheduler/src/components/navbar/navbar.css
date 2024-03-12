@@ -1,0 +1,59 @@
+.navbar {
+    background: conic-gradient(
+        from 221deg at 50% 50%,
+        rgba(111, 115, 217, 0.5) 0deg,
+        rgba(52, 60, 240, 0.5) 360deg
+    );
+    display: flex;
+    max-width: 12%;
+    flex-direction: column;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 160px;
+}
+
+.box_border {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.box_border_2 {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    margin-top: 580px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
+    position: bottom;
+}
+
+.button_text {
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    align-self: start;
+    flex-grow: 1;    
+}
+.opaque_button {
+    background-color: rgba(111, 115, 217, 0.8);
+    border: none;
+    padding: 10px; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}

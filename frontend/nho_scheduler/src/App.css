@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.gradient__bg {
+    /* global 90%+ browsers support */
+    background: conic-gradient(from 90deg at 50% 50%, rgba(185, 186, 187, 1) 0%, rgba(250, 250, 250, 1) 100%);    
+}
+
+.gradient__text {
+  background:var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.column_container {
+  gap: 20px;
+  display: flex;
+}
+
+.column_navigation {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 10%;
+  margin-left: 0px;
+}
+
+.column_quick {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.column_schedule_info {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 35%;
+  position: fixed;
+  right: 0;
+}

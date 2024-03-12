@@ -1,0 +1,45 @@
+.schedule {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 99;
+}
+
+.date_block {
+    background: conic-gradient(
+        from 221deg at 50% 50%,
+        rgba(111, 115, 217, 0.5) 0deg,
+        rgba(52, 60, 240, 0.5) 360deg
+    );
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.p {
+    font-family: Manrope, sans-serif;
+    align-self: start;
+    flex-grow: 1;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }

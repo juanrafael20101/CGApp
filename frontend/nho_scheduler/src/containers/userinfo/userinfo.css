@@ -1,0 +1,38 @@
+.userinfo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+.user_info_block {
+    background: conic-gradient(
+        from 221deg at 50% 50%,
+        rgba(111, 115, 217, 0.5) 0deg,
+        rgba(52, 60, 240, 0.5) 360deg
+    );
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.user_info_text {
+    font-family: Manrope, sans-serif;
+    align-self: start;
+    flex-grow: 1;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.sign_out_button {
+    margin-left: 10px;
+    margin-right: 5px;
+    background: 0%;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+}
